@@ -7,11 +7,14 @@ package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.System.out;
+import java.lang.Math;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 /**
  *
@@ -73,6 +76,13 @@ public class AmortizacaoPriceServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        double i = request.getParameter("i");
+        double n = request.getParameter("n");
+        double PV = request.getParameter("PV");
+        double parcela = PV*(i/100)/(1-(1/Math.pow(1+(i/100),n)));
+        PrintWriter out = response.getWriter();
+        out.Println("Sua parcela será de: " + parcela);
+        out.close();
     }
 
     /**
