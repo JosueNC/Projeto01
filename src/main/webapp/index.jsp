@@ -18,8 +18,8 @@
         <h3><a href="amortizacaoprice.jsp">Amortização PRICE</a></h3>
         
         
-        <h1>teste do bruno pra saber se o netbeans funciona direto com o git</h1>
         <h2>Índice</h2>
-        <p>To-do...</p>
+        <p>Membros do grupo:<br>Bruno Pereira<br>Josué Custódio<br>Bianca Sobral<br>Renan Scalanti
+            <br>Jorge<br>Gabriel</p>
     </body>
 </html>
